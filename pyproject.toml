@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "swufe-ems-tool"
+version = "0.1.0"
+description = "a tool for swufe's new EMS(Educational Management System)"
+authors = ["Haohanblue <haohanblue@foxmail.com>"]
+license = "MIT License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+beautifulsoup4 = "^4.13.4"
+urllib3 = "^2.4.0"
+lxml = "^5.3.2"
+aiohttp = "^3.11.16"
+pycryptodome = "^3.22.0"
+pandas = "^2.2.3"
+selenium = "^4.31.0"
+pytest-playwright = "^0.7.0"
+playwright = "^1.51.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
