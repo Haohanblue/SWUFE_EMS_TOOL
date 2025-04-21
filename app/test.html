@@ -1,0 +1,621 @@
+<!doctype html>
+<!-- <html lang="zh-CN" class="tb-allpage-filter">  -->
+<html lang="zh-CN">
+
+<head>
+    <meta name="renderer" content="webkit" />
+
+
+
+
+
+
+
+
+
+
+
+
+    <title>教学管理信息服务平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Copyright" content="zfsoft" />
+
+    <script>
+        var __vpn_hostname_data = "webvpn.swufe.edu.cn";
+var __vpn_protocol_data = "https";
+var __vpn_protocol_host = "https://webvpn.swufe.edu.cn";
+var __vpn_app_hostname_data = "77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f";
+var __vpn_app_protocol_data = "http";
+var __vpn_app_port_data = "";
+var __vpn_js_file = "/wengine-vpn/js/main.js?ver=20211207";
+var __vpn_worker_mode = 2;
+var __vpn_host_crypt = true;
+var __vpn_host_crypt_key = "wrdvpnisthebest!";
+var __vpn_host_crypt_iv = "wrdvpnisthebest!";
+    </script>
+    <script src="/wengine-vpn/js/main.js?ver=20211207" charset="utf-8"></script>
+    <link rel="icon"
+        href="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/logo/favicon.ico?t=1745238186742"
+        type="image/x-icon" />
+    <link rel="shortcut icon"
+        href="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/logo/favicon.ico?t=1745238186742"
+        type="image/x-icon" />
+    <script type="text/javascript">
+        vpn_eval((function(){
+
+var _path 				= "";
+var _systemPath 		= "";
+var _stylePath 			= "/zftal-ui-v5-1.0.2";
+
+
+}
+).toString().slice(12, -2),"");
+    </script>
+    <!--jQuery核心框架库 -->
+    <script type="text/javascript"
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/js/other_jquery/jquery.min.js?vpn-7&amp;ver=29086667">
+    </script>
+    <!--jQuery常用工具扩展库：基础工具,资源加载工具,元素尺寸相关工具 -->
+    <script type="text/javascript"
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/js/zftal/jquery.utils.contact-min.js?vpn-7&amp;ver=29086667"
+        charset="utf-8"></script>
+    <!--jQuery浏览器检测 -->
+    <script type="text/javascript"
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/js/browse/browse-judge.js?vpn-7&amp;ver=29086667">
+    </script>
+    <script type="text/javascript">
+        vpn_eval((function(){
+
+	//\u6d4f\u89c8\u5668\u7248\u672c\u9a8c\u8bc1
+	var intBro = broswer();
+	if(intBro.msie==true||intBro.safari==true||intBro.mozilla==true||intBro.chrome==true){
+		if(intBro.msie==true&&intBro.version<9){
+		   window.location.href = _path+"/xtgl/init_cxBrowser.html";
+		}
+	}else{
+		 window.location.href = _path+"/xtgl/init_cxBrowser.html";
+	}
+
+
+}
+).toString().slice(12, -2),"");
+    </script>
+    <!--Bootstrap布局框架-->
+    <link rel="stylesheet" type="text/css"
+        href="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/plugins/bootstrap/css/bootstrap.min.css?vpn-6&amp;ver=29086667" />
+
+    <link rel="stylesheet" type="text/css"
+        href="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/css/zftal-ui.css?vpn-6&amp;ver=29086667" />
+
+    <script type="text/javascript"
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/plugins/bootstrap/js/bootstrap.min.js?vpn-7&amp;ver=29086667"
+        charset="utf-8"></script>
+    <!--jQuery.chosen美化插件-->
+    <link rel="stylesheet" type="text/css"
+        href="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/plugins/chosen/css/chosen-min.css?vpn-6&amp;ver=29086667" />
+    <script type="text/javascript"
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/plugins/chosen/jquery.choosen.concat-min.js?vpn-7&amp;ver=29086667"
+        charset="utf-8"></script>
+    <script type="text/javascript"
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/plugins/chosen/lang/zh_CN-min.js?vpn-7&amp;ver=29086667"
+        charset="utf-8"></script>
+    <script type="text/javascript"
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/js/utils/jquery.utils.pinyin.min.js?vpn-7&amp;ver=29086667"
+        charset="utf-8"></script>
+    <!--业务框架jQuery全局设置和通用函数库-->
+    <script type="text/javascript"
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/js/jquery.zftal.contact-min.js?vpn-7&amp;ver=29086667">
+    </script>
+    <!--业务框架前端脚本国际化库-->
+    <script type="text/javascript"
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/js/zftal/lang/jquery.zftal_zh_CN-min.js?vpn-7&amp;ver=29086667">
+    </script>
+    <!--[if lt IE 9]>
+<script src="/zftal-ui-v5-1.0.2/assets/js/html5shiv.min.js?ver=29086667" type="text/javascript" charset="utf-8"></script>
+<script src="/zftal-ui-v5-1.0.2/assets/js/respond.min.js?ver=29086667" type="text/javascript" charset="utf-8"></script>
+<![endif]-->
+    <!--jQuery常用工具扩展库：基础工具,资源加载工具,元素尺寸相关工具 -->
+    <script type="text/javascript"
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/js/zftal/jquery.utils.contact-min.js?vpn-7&amp;ver=29086667"
+        charset="utf-8"></script>
+    <!--jQuery基础工具库：$.browser,$.cookie,$.actual等 -->
+    <script type="text/javascript"
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/js/zftal/jquery.plugins.contact-min.js?vpn-7&amp;ver=29086667"
+        charset="utf-8"></script>
+    <!--jQuery自定义event事件库 -->
+    <script type="text/javascript"
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/js/zftal/jquery.events.contact-min.js?vpn-7&amp;ver=29086667"
+        charset="utf-8"></script>
+    <!--JavaScript对象扩展库：Array,Date,Number,String -->
+    <script type="text/javascript"
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/js/zftal/jquery.extends.contact-min.js?vpn-7&amp;ver=29086667"
+        charset="utf-8"></script>
+    <!--Bootbox弹窗插件-->
+    <link rel="stylesheet" type="text/css"
+        href="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/plugins/bootbox/css/bootbox.css?vpn-6&amp;ver=29086667" />
+    <script
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/plugins/bootbox/bootbox.concat-min.js?vpn-7&amp;ver=29086667"
+        type="text/javascript" charset="utf-8"></script>
+    <script
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/plugins/bootbox/lang/zh_CN.js?vpn-7&amp;ver=29086667"
+        type="text/javascript" charset="utf-8"></script>
+
+
+    <meta http-equiv="Content-Security-Policy"
+        content="script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;">
+
+
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+    <link type="text/css" rel="stylesheet"
+        href="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/css/jw-login.css?vpn-6&amp;ver=29086667" />
+    <!--Bootbox弹窗插件-->
+    <link rel="stylesheet" type="text/css"
+        href="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/plugins/bootbox/css/bootbox-min.css?vpn-6&amp;ver=29086667" />
+    <script
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/plugins/bootbox/bootbox.concat-min.js?vpn-7&amp;ver=29086667"
+        type="text/javascript" charset="utf-8"></script>
+    <script
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/plugins/bootbox/lang/zh_CN.js?vpn-7&amp;ver=29086667"
+        type="text/javascript" charset="utf-8"></script>
+    <link type="text/css" rel="stylesheet"
+        href="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/css/qcode.css?vpn-6&amp;ver=29086667" />
+    <script type="text/javascript"
+        src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/js/globalweb/comp/xtgl/device.js?vpn-7&amp;ver=29086667">
+    </script>
+
+</head>
+
+<body style="background:#fafafa; display: none;">
+    <input type="hidden" name="dlmmsfknt" id="dlmmsfknt" value= 1>
+    <input type="hidden" name="ydappsfbldlzt" id="ydappsfbldlzt" value= 0>
+    <input type="hidden" name="yzcskz" id="yzcskz" value= 3>
+    <input type="hidden" name="mmsfjm" id="mmsfjm" value= 1>
+    <input type="hidden" name="mmsrddcshkzfs" id="mmsrddcshkzfs" value= 1>
+    <input type="hidden" name="dlsbsdsj" id="dlsbsdsj" value= 3>
+    <input type="hidden" name="sfxswechatlogin" id="sfxswechatlogin" value= 0>
+    <input type="hidden" name="scene_id" id="scene_id" value= >
+    <input type="hidden" name="authJwglxtLoginURL" id="authJwglxtLoginURL" value= >
+    <input type="hidden" name="rzzxxs" id="rzzxxs" value= >
+    <input type="hidden" name="rzys" id="rzys" value= >
+    <input type="hidden" name="sfzywqh" id="sfzywqh" value= 1>
+    <input type="hidden" name="xxdm" id="xxdm" value= 10651>
+    <input type="hidden" name="userPolicyOn" id="userPolicyOn" value= 0>
+    <input type="hidden" name="dxsyrz" id="dxsyrz" value= 0>
+
+    <div class="container container_1170">
+        <div class="row sl_log_top">
+            <div class="col-sm-8 logo_1"><img src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/images/logo/logo_jw_d.png?vpn-1&amp;t=1745238186742" style="margin-top:-3px"/>
+
+
+                <span id="xtmc">本科智慧教学管理系统</span>
+
+            </div>
+            <div class="col-sm-4 text-right hidden-xs">
+
+                <!-- 中英文切换 是否显示-->
+                <div class="btn-group" style="margin-top: 9px;">
+                    <button type="button" id="btn_zh_CN" value="zh_CN" class="btn btn-sm btn-lang btn-lang-disabled" href="javascript:this.top.vpn_inject_scripts_window(this);vpn_eval((function () { void(0); }).toString().slice(14, -2))">中 文
+				</button>
+                    <button type="button" id="btn_en_US" value="en_US" class="btn btn-sm btn-lang btn-lang-disabled" href="javascript:this.top.vpn_inject_scripts_window(this);vpn_eval((function () { void(0); }).toString().slice(14, -2))">English
+				</button>
+                </div>
+                <script type="text/javascript">
+                    vpn_eval((function(){
+
+				var _localeKey = "zh_CN";
+				jQuery("#btn_" + _localeKey).removeClass("btn-lang-disabled").addClass("btn-lang-enabled");
+			
+
+}
+).toString().slice(12, -2),"");
+                </script>
+
+            </div>
+        </div>
+        <div class="row sl_log_bor4">
+
+            <div class="col-sm-8 hidden-xs sl_log_lf slideShow">
+                <!-- 0不轮换图片-->
+                <img class="img-responsive" src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/images/login_bg_pic.jpg?vpn-1&amp;t=1745238186742"/>
+
+
+
+            </div>
+            <div class="col-sm-4 sl_log_rt">
+                <form class="form-horizontal" role="form"
+                    action="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/xtgl/login_slogin.html"
+                    method="post">
+                    <input type="hidden" id="csrftoken" name="csrftoken" value="99b08d2a-5bcc-4b2e-8edd-0aa30adecd9b,99b08d2a5bcc4b2e8edd0aa30adecd9b"/>
+                    <input type="hidden" id="language" name="language" value="zh_CN"/>
+                    <input type="hidden" name="ydType" id="ydType" value= >
+                    <div>
+
+                        <div class="tab-content">
+
+                            <div id="home" class="tab-pane in active">
+
+                                <h5>用户登录</h5>
+
+                                <!-- 防止浏览器自动填充密码 -->
+                                <input type="text" style="display: none;" autocomplete="off"/>
+                                <input type="password" style="display: none;" autocomplete="off"/>
+                                <!-- 防止浏览器自动填充密码 end -->
+
+                                <p id="tips" class="bg_danger sl_danger">
+                                    <span class="glyphicon glyphicon-minus-sign"></span>用户名或密码不正确，请重新输入！
+                                </p>
+
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><img src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/images/log_ic01.png?vpn-1" width="16" height="16"/>
+                                        </div>
+                                        <input type="text" class="form-control" name="yhm" id="yhm" value="" placeholder="用户名" onblur="var vpn_return;eval(vpn_rewrite_js((function () {  }).toString().slice(14, -2), 2));return vpn_return;" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><img src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/images/log_ic02.png?vpn-1" width="16" height="16"/>
+                                        </div>
+                                        <input type="password" name="mm" id="hidMm" style="display:none" autocomplete="off">
+                                        <input type="text" class="form-control" name="mm" id="mm" value="" placeholder="密码" autocomplete="off" onfocus="var vpn_return;eval(vpn_rewrite_js((function () { this.type=&#39;password&#39; }).toString().slice(14, -2), 2));return vpn_return;">
+                                        <input type="password" style="display:none;" autocomplete="off">
+                                    </div>
+                                </div>
+
+
+
+
+
+                                <div class="form-group" id="myDiv">
+                                    <!--<a href="/xtgl/init_fkIndex.html" class="checkbox pull-left" target="_blank">访客登录</a> -->
+                                    <a href="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/pwdmgr/retake/index.zf"
+                                        id="wjmm" class="checkbox pull-right " target="_blank">忘记密码？</a>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-primary btn-block" id="dl">登 录</button>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                                <!-- 登录口提示信息 -->
+
+                                <div class="form-group">
+                                    <div class="alert alert-danger" role="alert" id="dlktsxx">
+                                    </div>
+                                </div>
+
+
+                                <div class="sl_log_ewm hidden-xs">
+                                    <img src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/xtgl/dlycssz_cxDlycsszZp.html?vpn-1&amp;zplx=4&amp;t=1745238186742" width="90" height="90"/>&nbsp;&nbsp;<span>用手机扫一扫,<br />安全、便捷登录</span>
+                                </div>
+
+                            </div>
+                            <div id="profile" class="tab-pane" align="center">
+                                <img id="qrcode" src="" class="img-thumbnail" alt="Cinque Terre" style="weight:220px;height:220px;">
+                                <img id="qrcodeerror" src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/css/assets/images/erweima.png?vpn-1" class="img-thumbnail" alt="Cinque Terre" style="weight:220px;height:220px;display:none;cursor:pointer;">
+                                <p class="tipsqrcode"><img id="wxbs" src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/css/assets/images/timg.png?vpn-1" style="weight:15px;height:15px;">微信扫码
+                                </p>
+                                <p class="tipsqrcode">扫码关注公众号进行登录</p>
+                            </div>
+                            <div class="qcode" id="qcodepc" style="display:none;">
+                                <p>统一身份认证</p>
+                                <div id="qrcode1">
+                                    <div id="qrcode-img" title=""><canvas width="179" height="179"
+                                            style="display: none;"></canvas>
+                                        <img alt="Scan me!"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAM0AAADNCAYAAAAbvPRpAAAFXElEQVR42u3dQW6EMAwFUO5/6ekFWqkawP52HhI72jAhL4uvxLmu6/qk3L9dXe3eeZf//u3TbVRcSf3XeEMDDTTQQAMNNNBAAw000OxCk9T5Fe/3dBsVAz9pEkvH+kI/QwMNNNBAAw000EADDTTQ7EeT3vlduCb2XzrqivTx5v+DBhpooIEGGmiggQYaaKCBZkonpGOYmEh2jQNooIEGGmiggQYaaKCBBhpoDk7PkpaaJMGseOeud4EGGmiggQYaaKCBBhpooIHmRTRdSU/6MpqJaVfXu3T97QsTLzTQQAMNNNBAAw000EADzS406RU2Pec5ZWkNDs9BA43noIHGc9BA4zlovrw/4VfScpaK/zfxd0xMxW71PTTQQAMNNNBAAw000EADzWQ0FWdBphfleHpgOQajZp9MRRslm9CggQYaaKCBBhpooIEGGmgmo0kaqBXpVNJvSz/6JGlSvPm30EADDTTQQAMNNNBAAw00c9F0Le9YNOscdZZmehpXghoaaKCBBhpooIEGGmiggWYbmvRKkulFG5LSuIrnugC3pZnQQAMNNNBAAw000EADDTTb0CSlZyVpyMDjI9LP/5yICxpooIEGGmiggQYaaKCB5gg0XS/dldolFcKo6NPN36PiggYaaKCBBhpooIEGGmigOQJNRSq2eb/KRHCb233h+0IDDTTQQAMNNNBAAw000OxCk7TPY+JenK60K2mQp5+LCg000EADDTTQQAMNNNBAcyyaRq3RZ1UmpXvpZ5E+DTMJOjTQQAMNNNBAAw000EADzRFo0pOPiQlY1+BNh5S+jObX56CBBhpooIEGGmiggQYaaCaj2bI3ZUuylTTYNlcevdkGNNBAAw000EADDTTQQAPNLjRdg7xrwLSd3Rg+IVS0O3GygwYaaKCBBhpooIEGGmigWYdmy/KOift4tqR2SZVHoYEGGmiggQYaaKCBBhpooPkiPUtPnbqW+XSldgNKt8akhSVlaaGBBhpooIEGGmiggQYaaLah2YIrKbVLTxrTlzpVjNM/noMGGmiggQYaaKCBBhpooNmFJn1ZycS0ayKQpD4NmxCggQYaaKCBBhpooIEGGmjmovk8fKUX4Jj40btSoonfvOL9oIEGGmiggQYaaKCBBhpojkAzsYBE0gdJGvhb9rpAAw000EADDTTQQAMNNNBA89W9N9lKSmGSBtvEpT9d4woaaKCBBhpooIEGGmiggWYdmqSOST+vM2n5SVIKeFwb0EADDTTQQAMNNNBAAw00s9vISYTSB356BcsuXEkTQtFyL2iggQYaaKCBBhpooIEGmrlokj5IxYfrSsoGzJ7R52Z2jQNooIEGGmiggQYaaKCBBpp1aNILG3SB6/ptXeljeoGQsP6DBhpooIEGGmiggQYaaKCZiyY96Uk/r7NriVBSwhlW/fL9GxpooIEGGmiggQYaaKCBZhua9CIa6Xs6kgZ5ehpXcT8+/qCBBhpooIEGGmiggQYaaLahSbqSOjVpGUhXAjZgr8v7+4eggQYaaKCBBhpooIEGGmgmo9mScqTvOUlakpI+sTVieL8sLTTQQAMNNNBAAw000EADTSKarlSsIl1JWmoyMY3bkp7dfGdooIEGGmiggQYaaKCBBpr9aJKqMnZ1VtfgSC/8kZSOFr0fNNBAAw000EADDTTQQAMNNFOKY2yBngRuS7VPaKCBBhpooIEGGmiggQYaaAah6bomnq+ZPomFAYEGGmiggQYaaKCBBhpooDkTTXrKkTTwJ+JK7/skhNBAAw000EADDTTQQAMNNOvQbDkbEZC+o0qSJs8Xvi800EADDTTQQAMNNNBAA81YND9MXR4t28yoBgAAAABJRU5ErkJggg==">
+                                    </div>
+                                </div>
+                                <div id="qrcode-content" style="display:none;">
+                                    <div class="qrcode-bg"></div>
+                                    <p class="refresh-text">
+                                        <i class="fa fa-refresh"></i>
+                                        <a href="javascript:this.top.vpn_inject_scripts_window(this);vpn_eval((function () { void(0); }).toString().slice(14, -2))"
+                                            id="qrcode_refresh">刷新 </a>
+                                    </p>
+                                </div>
+                                <span>打开教务app<br>在【首页】页面上打开扫一扫</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- footer -->
+
+    <div id="footerID" class="footer" style="background-color: ">
+
+        <p>版权所有&#169; Copyright 1999-2025 西南财经大学　　中国·四川成都市温江区柳城街道柳台大道555号&nbsp;&nbsp;&nbsp;版本V-9.0</p>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+        vpn_eval((function(){
+
+	//系统中页面底部的时间随系统时间来定
+	/* var date=new Date;
+	var year=date.getFullYear();
+	var s = $("#footerID").text().indexOf('-');
+	var textNr =$("#footerID").text().substr(0,s+1)+year+$("#footerID").text().substr(s+5);
+	$("#footerID").text("");
+	$("#footerID").text(textNr); */
+
+
+
+}
+).toString().slice(12, -2),"");
+    </script>
+    <!-- footer-end -->
+</body>
+<script type="text/javascript">
+    vpn_eval((function(){
+
+
+	var sfydl = false;  //作为页签切换是否停止计时器的标记，
+	$('#myTab a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+		var tab = e.target; // activated tab
+		var tabid = $(tab).parent().attr("id");
+		var erweimatime;
+		if(tabid == 'second'){  //扫码登录
+			sfydl = true;
+			//生成二维码
+			 $.ajax({
+				url:_path+'/auth/auth_wechatQrcodeLogin.html',
+				async: false,
+				type:"post",
+				dataType:"json",
+				success:function(data){
+					document.getElementById("qrcode").setAttribute("src",data.showqrcodepath);
+					$("#qrcodeerror").attr('style','weight:220px;height:220px;display:none;cursor:pointer;');
+					$("#qrcode").attr('style','weight:220px;height:220px;display:block;');
+					erweimatime = data.erweimaexpire_seconds;
+				}
+			});
+		}else{
+			//用户登录
+			sfydl = false;
+		}
+		
+		//二维码刷新计时
+		var myVar = setInterval(myTimer ,(erweimatime-10)*1000);
+		//切换到扫码登录后进行轮训，判断用户是否已经登录
+		var LoginTimer = setInterval(ztTimer ,5000);
+		
+		function myTimer(){
+			$("#qrcode").attr('style','weight:220px;height:220px;display:none;');
+			$("#qrcodeerror").attr('style','weight:220px;height:220px;display:block;cursor:pointer;');
+			//二维码失效时停止计时器
+			clearInterval(myVar);
+			clearInterval(LoginTimer);
+		}
+		
+		function ztTimer(){
+			if(!sfydl){
+				//切换到用户登录页签时停止计时器
+				clearInterval(myVar);
+				clearInterval(LoginTimer);
+			}else{
+				if("1" == $("#sfxswechatlogin").val()){
+					$.ajax({
+						url:_path+'/auth/auth_cxYhLoginZt.html',
+						async: false,
+						type:"post",
+						data : { scene_id : $("#scene_id").val()},
+						dataType:"json",
+						success:function(data){
+							if(data.msg == 'success'){
+								//返回登录状态为成功时停止计时器
+								clearInterval(LoginTimer);
+								window.location.href = _path + data.redirectPath;
+							}
+						}
+					});
+				}
+			}
+		}
+		
+		//点击图片刷新二维码
+		$("#qrcodeerror").click(function(){
+			$.ajax({
+				url:_path+'/auth/auth_wechatQrcodeLogin.html',
+				async: false,
+				type:"post",
+				dataType:"json",
+				success:function(data){
+					document.getElementById("qrcode").setAttribute("src",data.showqrcodepath);
+					$("#qrcodeerror").attr('style','weight:220px;height:220px;display:none;cursor:pointer;');
+					$("#qrcode").attr('style','weight:220px;height:220px;display:block;');
+					erweimatime = data.erweimaexpire_seconds;
+				}
+			});
+			
+			//二维码刷新计时
+			var myVar1 = setInterval(myTimer1 ,(erweimatime-10)*1000);
+			//切换到扫码登录后进行轮训，判断用户是否已经登录
+			var LoginTimer1 = setInterval(ztTimer1 ,5000);
+			
+			function myTimer1(){
+				$("#qrcode").attr('style','weight:220px;height:220px;display:none');
+				$("#qrcodeerror").attr('style','weight:220px;height:220px;display:block;cursor:pointer;');
+				//二维码失效时停止计时器
+				clearInterval(myVar1);
+				clearInterval(LoginTimer1);
+			}
+			
+			function ztTimer1(){
+				if(!sfydl){
+					//切换到用户登录页签时停止计时器
+					clearInterval(myVar1);
+					clearInterval(LoginTimer1);
+				}else{
+					if("1" == $("#sfxswechatlogin").val()){
+						$.ajax({
+							url:_path+'/auth/auth_cxYhLoginZt.html',
+							async: false,
+							type:"post",
+							data : { scene_id : $("#scene_id").val()},
+							dataType:"json",
+							success:function(data){
+								if(data.msg == 'success'){
+									//返回登录状态为成功时停止计时器
+									clearInterval(LoginTimer1);
+									window.location.href = _path + data.redirectPath;
+								}
+							}
+						});
+					}
+				}
+			}
+		});
+	});
+	
+	//统一身份验证登录按钮颜色
+	if("1" == $("#rzzxxs").val()){
+		if($.founded($("#rzys").val())){
+			$("#tysfyzdl").attr("style","background-color:"+$("#rzys").val()) ;
+		}else{
+			$("#tysfyzdl").attr("style","background-color:#blue") ;
+		}
+	}
+	//访问统一身份验证
+	$("#tysfyzdl").click(function(){
+		window.location.href = $("#authJwglxtLoginURL").val();
+	});
+	
+	
+	jQuery(document).ready(function() {
+		//$('#localChange').trigger("chosen");
+		/// detectOS();
+		//用户名密码 输错n次 需输入验证码            		
+		 
+		
+		 
+	});
+	
+	
+		var dlktsxx="安全提示：。 1.请妥善保管好自己的用户名和密码；。 2.为了您的安全，请不定期修改密码。密码必须包括数字、小写字母、大写字母、特殊符号等四种；。 3.如密码忘记，可用手机号码找回；。 4.推荐使用谷歌浏览器、火狐浏览器、edge浏览器以及国产浏览器极速模式、不推荐IE系列浏览器。。";
+		var arr=[];
+		var html="";
+		if(dlktsxx.indexOf("。")>-1){
+			arr=dlktsxx.split("。");
+			for(var s=0;s<arr.length;s++){
+				if(arr[s]!=''){
+					html+=arr[s]+"<br>";
+				}
+			}
+		}else{
+			html=dlktsxx;
+		}
+		$("#dlktsxx").html(html);
+	
+	
+	//ip
+	
+    
+	jQuery(function($){
+		
+		function changeLanguage(lang) {
+			$.ajaxSetup({async : false});
+			jQuery.post(_path + "/xtgl/init_changeLocal.html", {//config-shiro.xml里要加这个
+				language: lang != "en_US" ? "zh_CN" : "en_US"
+			}, function (b) {
+				if (1 == parseInt(b)) {
+					if ($("#topButton").size() > 0) {
+						$("#topButton").click();
+					} else {
+						window.location.href = _path;
+					}
+				}
+			}, "json");
+			$.ajaxSetup({async: true});
+		}
+
+		$("button.btn-lang").click(function () {
+			if (!$(this).hasClass("btn-lang-enabled")) {
+				changeLanguage($(this).attr("value"));
+			}
+		})
+
+		//切换英文
+		if ($(".btn-lang-enabled").val() == "en_US") {
+			$("#xtmc").text("Smart Education Management System for Undergraduate Programs");
+			$("#title").text("Smart Education Management System for Undergraduate Programs")
+			$("#wpjssq").text("New Teacher Account Application");
+			$("#xssq").text("Student Account Application");
+			$("#wjmm").text("Forgot your password?");
+			$("#jzfw").text("Parents visit");
+            $("#thirdPartyLoginMethod").text("Third-party login:");
+			$("#dlktsxx").hide();
+		}
+	});
+	function zhcxRedirect(){
+		$.ajax({
+			url:_path+'/auth/auth_getZhcxUrl.html',
+			async: false,
+			type:"post",
+			dataType:"json",
+			success:function(data){
+				window.location.href= data.url;
+			}
+		});
+	}
+	
+	function qywxRedirect(){
+		$.ajax({
+			url:_path+'/auth/auth_cxQywxUrl.html',
+			async: false,
+			type:"post",
+			dataType:"json",
+			success:function(data){
+				window.location.href= data;
+			}
+		});
+	}
+	
+
+
+}
+).toString().slice(12, -2),"");
+</script>
+<script type="text/javascript"
+    src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/plugins/crypto/rsa/jsbn.js?vpn-7&amp;ver=29086667">
+</script>
+<script type="text/javascript"
+    src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/plugins/crypto/rsa/prng4.js?vpn-7&amp;ver=29086667">
+</script>
+<script type="text/javascript"
+    src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/plugins/crypto/rsa/rng.js?vpn-7&amp;ver=29086667">
+</script>
+<script type="text/javascript"
+    src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/plugins/crypto/rsa/rsa.js?vpn-7&amp;ver=29086667">
+</script>
+<script type="text/javascript"
+    src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/zftal-ui-v5-1.0.2/assets/plugins/crypto/rsa/base64.js?vpn-7&amp;ver=29086667">
+</script>
+<script type="text/javascript"
+    src="/http/77726476706e69737468656265737421fae0598869237f45780dc7a99c406d361f/js/globalweb/login/login.js?vpn-7&amp;ver=29086667">
+</script>
+
+</html>
